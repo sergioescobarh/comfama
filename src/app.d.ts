@@ -9,4 +9,5 @@ type TAnimes = {
     mal_id: string;
     url: string;
     score: number;
+    titles:[{title: string}]
 };

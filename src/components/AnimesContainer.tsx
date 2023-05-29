@@ -3,14 +3,26 @@ import { HeartOutlined } from '@ant-design/icons'
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import Recomendation from '../components/Recomendation'
+import {setLiked} from '../actions/index'
 
+type ClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => void;
 type Props = {}
 
 export default function AnimesContainer({ }: Props) {
 
   const dispatch: any = useDispatch()
   const wanted = useSelector((state: any) => state.wanted)
+  const animes = useSelector((state: any) => state.animes)
+  const liked = useSelector((state: any) => state.liked)
+  const favorites = (id:string) => {
+    console.log(animes)
+    const newList = liked
+    const newFav =animes.find((e:TAnimes)=>e.mal_id===id)
+    newList.push(newFav)
+      dispatch(setLiked(newList))
+      console.log(newFav)
 
+    }
   return (
     <section className='animesContainer'>
 
@@ -24,7 +36,7 @@ export default function AnimesContainer({ }: Props) {
             <p>Puntaje: {i.score}</p>
             <div className='foot'>
               <Recomendation score={i.score} />
-              <HeartOutlined style={{ fontSize: 20, color: 'pink' }} />
+              <HeartOutlined value={i.mal_id} style={{ fontSize: 20, color: 'pink' }}  onClick={()=>{favorites(i.mal_id)}} />
             </div>
           </Card>
         </div>

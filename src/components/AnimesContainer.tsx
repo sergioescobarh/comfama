@@ -1,4 +1,5 @@
 import { Card } from 'antd'
+import {HeartOutlined} from '@ant-design/icons' 
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import Recomendation from '../components/Recomendation'
@@ -18,7 +19,10 @@ export default function AnimesContainer({}: Props) {
           <Card  title={i.titles[0].title}  cover={<img src={i.images.jpg.image_url} alt='animeImage'/>}>
           
           <p>Puntaje: {i.score}</p>
+          <div className='foot'>
           <Recomendation score={i.score}/>
+          <HeartOutlined  style={{fontSize:20,color:'pink'}}  />
+          </div>
         </Card>
       </div>
         )}

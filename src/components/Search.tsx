@@ -18,9 +18,9 @@ export default function Search({}: Props) {
     }
   }
   return (
-    <section>
+    <section className='search'>
       <Col span={8} offset={8}>
-        <Input onChange={search} />
+        <Input placeholder='Busca tu anime...' onChange={search} />
       </Col>
     </section>
   )

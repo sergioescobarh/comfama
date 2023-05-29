@@ -1,0 +1,14 @@
+.recomendation {
+    height: 50px;
+    width: 70%;
+    font-size: 0.8em;
+    .recomended {
+        color:green;
+    }
+    .middle {
+        color: rgb(213, 213, 6);
+    }
+    .notRecomended {
+        color: red;
+    }
+}

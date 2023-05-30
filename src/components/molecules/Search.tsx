@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Input } from 'antd' 
 import { useDispatch, useSelector } from 'react-redux'
-import { setAnimes, setWanted } from '../actions/index';
+import { setAnimes, setWanted } from '../../actions/index';
 type Props = {}
 
 export default function Search({}: Props) {

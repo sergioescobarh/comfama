@@ -3,9 +3,9 @@ import { useEffect, } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 const inter = Inter({ subsets: ['latin'] })
 import { setAnimes, setWanted } from '../actions/index';
-import  AnimesContainer  from '../components/AnimesContainer'
-import Header from '../components/Header'
-import Search from '@/components/Search'
+import  AnimesContainer  from '../components/organisms/AnimesContainer'
+import Header from '../components/molecules/Header'
+import Search from '@/components/molecules/Search'
 
 
 export default function Home() {

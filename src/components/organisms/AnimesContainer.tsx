@@ -2,13 +2,13 @@ import { Card } from 'antd'
 import { HeartOutlined } from '@ant-design/icons'
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import Recomendation from '../components/Recomendation'
-import {setLiked} from '../actions/index'
+import Recomendation from '../atoms/Recomendation'
+import {setLiked} from '../../actions/index'
 
 type ClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => void;
-type Props = {}
+type Props = {  }
 
-export default function AnimesContainer({ }: Props) {
+export default function AnimesContainer({  }: Props) {
 
   const dispatch: any = useDispatch()
   const wanted = useSelector((state: any) => state.wanted)
@@ -21,6 +21,7 @@ export default function AnimesContainer({ }: Props) {
     newList.push(newFav)
       dispatch(setLiked(newList))
       console.log(newFav)
+      console.log(newList)
 
     }
   return (

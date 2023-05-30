@@ -1,6 +1,7 @@
 import React from 'react'
-import MyCarousel from '../components/MyCarousel'
-import Header from '../components/Header'
+import MyCarousel from '../components/atoms/MyCarousel'
+import Header from '../components/molecules/Header'
+import FavoritesList from '@/components/organisms/favoritesList'
 type Props = {}
 
 export default function Favorites({}: Props) {
@@ -8,6 +9,7 @@ export default function Favorites({}: Props) {
     <div>
         <Header/>
         <MyCarousel />
+        <FavoritesList/>
     </div>
   )
 }

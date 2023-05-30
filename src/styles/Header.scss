@@ -5,12 +5,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    Link {
+        text-decoration: none;
+    }
+    h1 {
+        color: pink;
+    }
     img {
         height: 100%;
     }
     .rigth {
         border: solid 5px green;
         display:inline;
-
     }
 }

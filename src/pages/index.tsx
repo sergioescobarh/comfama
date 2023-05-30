@@ -7,6 +7,7 @@ import  AnimesContainer  from '../components/AnimesContainer'
 import Header from '../components/Header'
 import Search from '@/components/Search'
 
+
 export default function Home() {
   const dispatch: any = useDispatch()
   useEffect(() => {

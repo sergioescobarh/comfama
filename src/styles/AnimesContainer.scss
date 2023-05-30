@@ -1,13 +1,18 @@
 
+
 .animesContainer{
+  padding: 15px;
+    box-sizing: border-box;
+    max-width: 100vw;
+    min-height: 90vh;
     margin:0;
-    background-color: rgb(3, 5, 56);
-    width: 100vw;
+    background-color: #23252b;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     .card {
-      margin: 8px;
+      
+      margin-top: 20px;
       width: 44vw;
       img {
         max-height: 190px;

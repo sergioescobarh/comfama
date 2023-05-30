@@ -1,7 +1,9 @@
+import {saved} from '../utils/localStorage';
+
 const initialState = {
     animes: [],
     wanted: [],
-    liked: [],
+    liked:  [],
 }
 
 export const animesReducer = (state:any = initialState,action:any) =>{

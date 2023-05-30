@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import Recomendation from '../atoms/Recomendation'
 import {setLiked} from '../../actions/index'
 
+
 type ClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => void;
 type Props = {  }
 
@@ -20,6 +21,7 @@ export default function AnimesContainer({  }: Props) {
     const newFav =animes.find((e:TAnimes)=>e.mal_id===id)
     newList.push(newFav)
       dispatch(setLiked(newList))
+      localStorage.setItem('liked', JSON.stringify(newList))
       console.log(newFav)
       console.log(newList)
 

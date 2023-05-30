@@ -8,14 +8,11 @@ export default function Header({ }: Props) {
     return (
         <header className='header'>
             <Link href={'/'}>
-            <h2>Comfama</h2>
+                <h1>Comfama</h1>
             </Link>
-            <div>
             <Link href={'/Favorites'} className='right'>
-                <HeartOutlined  style={{ fontSize: 40, color: 'blue' }} />
+                <HeartOutlined style={{ fontSize: 40, color: 'blue' }} />
             </Link>
-            </div>
-            
         </header>
     )
 }

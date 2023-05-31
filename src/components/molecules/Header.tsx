@@ -1,5 +1,6 @@
 import React from 'react'
-import { HeartOutlined } from '@ant-design/icons'
+import { Button } from 'antd'
+import { HeartOutlined, AppstoreOutlined } from '@ant-design/icons'
 import Link from 'next/link'
 
 type Props = {}
@@ -7,12 +8,18 @@ type Props = {}
 export default function Header({ }: Props) {
     return (
         <header className='header'>
-            <Link href={'/'}>
-                <h1>Comfama</h1>
-            </Link>
-            <Link href={'/Favorites'} className='right'>
-                <HeartOutlined style={{ fontSize: 40, color: 'blue' }} />
-            </Link>
+            
+                <Button type='primary' href={'/'}>
+                <AppstoreOutlined style={{ fontSize: 25 }} />
+                </Button>
+                
+           
+            
+            <Button type='primary' href={'/Favorites'} >
+            <HeartOutlined style={{ fontSize: 27, color: 'pink' }} />
+                </Button>
+                
+            
         </header>
     )
 }

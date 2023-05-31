@@ -1,24 +1,13 @@
 import { Inter } from 'next/font/google'
-import { useEffect, } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-const inter = Inter({ subsets: ['latin'] })
-import { setAnimes, setWanted } from '../actions/index';
 import  AnimesContainer  from '../components/organisms/AnimesContainer'
+import  Footer  from '../components/molecules/Footer'
 import Header from '../components/molecules/Header'
 import Search from '@/components/molecules/Search'
-
+import { UseFetch } from '@/hooks/UseFetch';
+const url = 'https://api.jikan.moe/v4/anime'
 
 export default function Home() {
-  const dispatch: any = useDispatch()
-  useEffect(() => {
-    fetch('https://api.jikan.moe/v4/anime')
-      .then(response => response.json())
-      .then(data => {
-        dispatch(setAnimes(data.data))
-        dispatch(setWanted(data.data))
-      });
-  }, [])
-
+    UseFetch(url)  
   return (
     <div>
       <Search/>
@@ -26,6 +15,7 @@ export default function Home() {
       <main className='homeMain'>
       <AnimesContainer />
     </main>
+    <Footer/>
     </div>
     
   )

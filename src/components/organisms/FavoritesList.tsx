@@ -8,10 +8,10 @@ type Props = {}
 export default function FavoritesList({ }: Props) {
   const liked = useSelector((state: any) => state.liked)
   return (
-    <section className='animesContainer'>
+    <section id='1' className='animesContainer'>
       {liked.map((i: TAnimes) =>
         <div className='card' key={i.mal_id}>
-          <Card bodyStyle={{ backgroundColor: ' #e0e7ea ' }}
+          <Card 
             title={i.titles[0].title}
             // eslint-disable-next-line @next/next/no-img-element
             cover={<img src={i.images.jpg.image_url}

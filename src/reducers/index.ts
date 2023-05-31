@@ -1,5 +1,3 @@
-import {saved} from '../utils/localStorage';
-
 const initialState = {
     animes: [],
     wanted: [],
